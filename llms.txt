@@ -1,0 +1,132 @@
+# harry
+
+## Docs
+
+- [快速开始](/docs/openai-agents/index): 介绍如何使用 OpenAI Agents SDK 一步步构建智能体应用，本教程基于 [openai-agents-python](https://github.com/openai/openai-agents-python)
+- [Agent with tools](/docs/openai-agents/01_agent_loop)
+- [规划与任务追踪](/docs/openai-agents/03_todo_write): 为 Agent 引入任务管理，并在 Runner.run_streamed 中实现多步任务规划与流式输出。
+- [Agent 任务转移](/docs/openai-agents/04_subagent): 用 OpenAI Agents SDK 原生的 Agent.as_tool 与 handoffs 两种方式实现子 Agent 任务委派。
+- [Skill 按需加载](/docs/openai-agents/05_skill_loading): 用 list_skills 和 load_skill 两个工具实现惰性加载，让 Agent 按需获取领域知识，而不是把所有文档塞进系统提示。
+- [Checkpoint & RunState](/docs/openai-agents/developer/checkpoint): 了解如何通过检查点机制让 Agent 在执行中途暂停、保存状态，并在之后恢复继续执行。
+- [Mcp server](/docs/openai-agents/developer/mcp_server): 了解如何构建自己的 mcp server 并使用 openai agents sdk 连接
+- [Completions and responses](/docs/openai-agents/developer/completions_and_responses)
+- [Session 管理](/docs/openai-agents/developer/sessions): 深入解析 OpenAI Agents SDK 的会话持久化与管理架构，涵盖内置 Session、多数据库扩展（SQLite/MySQL/PostgreSQL/Redis/MongoDB）以及企业级多租户落地的架构权衡。
+- [What is MCP?](/docs/getting-started/intro)
+- [Architecture](/docs/learn/architecture)
+- [Servers](/docs/learn/server-concepts)
+- [Clients](/docs/learn/client-concepts)
+- [Versioning](/docs/learn/versioning)
+- [Connect to local MCP servers](/docs/develop/connect-local-servers): Learn how to extend Claude Desktop with local MCP servers to enable file system access and other powerful integrations
+- [Connect to remote MCP Servers](/docs/develop/connect-remote-servers): Learn how to connect Claude to remote MCP servers and extend its capabilities with internet-hosted tools and data sources
+- [Build with Agent Skills](/docs/develop/build-with-agent-skills): Use agent skills to guide AI coding assistants through MCP server design and implementation
+- [Build an MCP server](/docs/develop/build-server): Get started building your own server to use in Claude for Desktop and other clients.
+- [Build an MCP client](/docs/develop/build-client): Get started building your own client that can integrate with all MCP servers.
+- [Client Best Practices](/docs/develop/clients/client-best-practices): Patterns for scaling MCP host applications across many servers and tools.
+- [SDKs](/docs/sdk): Official SDKs for building with Model Context Protocol
+- [Understanding Authorization in MCP](/docs/tutorials/security/authorization): Learn how to implement secure authorization for MCP servers using OAuth 2.1 to protect sensitive resources and operations
+- [Security Best Practices](/docs/tutorials/security/security_best_practices): Security considerations, attack vectors, and best practices for MCP implementations
+- [MCP Inspector](/docs/tools/inspector): Interactive developer tooling for testing and debugging MCP servers, in the browser, on the command line, and in the terminal
+- [Web client](/docs/tools/inspector/web): A tab-by-tab walkthrough of the graphical MCP Inspector
+- [CLI client](/docs/tools/inspector/cli): Scripting the MCP Inspector: methods, output formats, exit codes, and CI recipes
+- [TUI client](/docs/tools/inspector/tui): The terminal MCP Inspector: navigation, tabs, and keyboard reference
+- [Configuration and flags](/docs/tools/inspector/configuration): Catalog vs. config files, which client owns which flag, and every environment variable
+- [Authorization](/docs/tools/inspector/authorization): How the MCP Inspector performs OAuth, re-authorizes mid-session, and shares tokens between its clients
+- [Protocol eras](/docs/tools/inspector/protocol-eras): How the Inspector negotiates legacy vs. modern MCP, and how every feature is handled between protocol eras
+- [Recipes](/docs/tools/inspector/recipes): Practical guides for transports, importing configs, reviewing MCP Apps, Docker, and network hosting
+- [Debugging](/docs/tools/debugging): A comprehensive guide to debugging Model Context Protocol (MCP) integrations
+- [Example Servers](/examples): A list of example servers and implementations
+- [Specification](/specification/index)
+- [Key Changes](/specification/changelog)
+- [Deprecated Features](/specification/deprecated)
+- [Architecture](/specification/architecture/index)
+- [Overview](/specification/basic/index)
+- [Versioning and Compatibility](/specification/basic/versioning)
+- [Overview](/specification/basic/patterns/index)
+- [Multi Round-Trip Requests](/specification/basic/patterns/mrtr)
+- [Subscriptions](/specification/basic/patterns/subscriptions)
+- [Cancellation](/specification/basic/patterns/cancellation)
+- [Progress](/specification/basic/patterns/progress)
+- [Overview](/specification/basic/transports/index)
+- [stdio](/specification/basic/transports/stdio)
+- [Streamable HTTP](/specification/basic/transports/streamable-http)
+- [Overview](/specification/basic/authorization/index)
+- [Authorization Server Discovery](/specification/basic/authorization/authorization-server-discovery)
+- [Client Registration](/specification/basic/authorization/client-registration)
+- [Security Considerations](/specification/basic/authorization/security-considerations)
+- [Roots](/specification/client/roots)
+- [Sampling](/specification/client/sampling)
+- [Elicitation](/specification/client/elicitation)
+- [Overview](/specification/server/index)
+- [Discovery](/specification/server/discover)
+- [Prompts](/specification/server/prompts)
+- [Resources](/specification/server/resources)
+- [Tools](/specification/server/tools)
+- [Caching](/specification/server/utilities/caching)
+- [Completion](/specification/server/utilities/completion)
+- [Logging](/specification/server/utilities/logging)
+- [Pagination](/specification/server/utilities/pagination)
+- [Schema Reference](/specification/schema)
+- [Extensions Overview](/extensions/overview): Optional extensions to the Model Context Protocol
+- [Extension Support Matrix](/extensions/client-matrix): Which MCP clients implement which official extensions
+- [Overview](/extensions/apps/overview): Interactive UI applications that render inside MCP hosts like Claude Desktop
+- [Build an MCP App](/extensions/apps/build): Getting started guide for building interactive UI applications with MCP Apps
+- [Overview](/extensions/auth/overview): Supplementary authorization mechanisms for the Model Context Protocol
+- [OAuth Client Credentials](/extensions/auth/oauth-client-credentials): Machine-to-machine authentication for MCP using the OAuth 2.0 client credentials flow
+- [Enterprise-Managed Authorization](/extensions/auth/enterprise-managed-authorization): Centralized access control for MCP in enterprise environments via identity providers
+- [Overview](/extensions/tasks/overview): Asynchronous task execution for long-running MCP operations
+- [About](/registry/about)
+- [Quickstart: Publish a Server](/registry/quickstart)
+- [FAQ](/registry/faq)
+- [Package Types](/registry/package-types)
+- [Remote Servers](/registry/remote-servers)
+- [Authentication](/registry/authentication)
+- [Versioning](/registry/versioning)
+- [GitHub Actions](/registry/github-actions)
+- [Moderation Policy](/registry/moderation-policy)
+- [Registry Aggregators](/registry/registry-aggregators)
+- [Terms of Service](/registry/terms-of-service)
+- [Jev：让 AI 决策成为软件的一部分](/posts/2026-09/jev): 介绍 TypeSafe 的 System One Model 和 Jev：它是什么、如何使用，以及它可能带来的影响。
+- [Building effective agents](/posts/2026-05/building-effective-agents): 一个成功设计的 Agent 往往源于简单、可组合的模式，而非复杂的框架。
+- [5 个常用的 Agent Skill 设计模式](/posts/2026-03/agent-skill-design-patterns): 本文不解释如何打包 skill，而是注重如何构建内容逻辑。
+- [概览](/posts/learn-harness-engineering/index): 围绕 Agent Harness 的系列学习笔记：从定义到上下文、指令、初始化与任务边界。
+- [模型能力强，不等于执行可靠](/posts/learn-harness-engineering/capable-not-reliable): 模型能力再强，也不等于在真实任务中执行可靠，问题往往出在 harness。
+- [Harness 定义](/posts/learn-harness-engineering/harness-definition): Harness 是模型之外的一切：指令、工具、环境、状态管理与验证反馈。
+- [让代码仓库成为唯一的事实来源](/posts/learn-harness-engineering/repo-as-source-of-truth): 对 AI agent 来说，不在仓库里的信息等于不存在，仓库应是唯一的事实来源。
+- [将指令拆分到不同文件中](/posts/learn-harness-engineering/split-instructions): 把庞大的指令拆分到多个文件中，让 agent 按需读取，减少注意力浪费。
+- [让跨会话的任务保持上下文连续](/posts/learn-harness-engineering/cross-session-continuity): 通过进度文件、决策日志与 Git 提交，让跨会话的长任务保持上下文连续。
+- [让 agent 每次工作前先初始化](/posts/learn-harness-engineering/initialize-before-work): 在 agent 开始干活前，先用独立阶段搭好环境、跑通验证命令、理清项目结构。
+- [给 Agent 划清每次任务的边界](/posts/learn-harness-engineering/task-boundaries): agent 的注意力是有限资源，用显式的任务边界避免过度延伸与不足完成。
+- [关于我（仍在完善）](/about/index): AIGC 算法与 Agent 全栈开发工程师，个人简介、技术栈、项目与联系方式。
+- [概览](/about/moments/index): 日常碎片、近况与随手分享的合集。
+- [2026-11-01](/about/moments/bloub-avatar): 记录最近 fork 并部署的一个好玩小项目 —— 纯 SVG 逐帧还原的 x.ai (Grok) 拟态 Avatar。
+- [概览](/about/notes/index): 零散想法、学习笔记与认知迭代的合集。
+- [Contributing to MCP](/community/contributing): How to contribute to the Model Context Protocol project
+- [Contributor Communication](/community/communication): Communication strategy and framework for the Model Context Protocol community
+- [Working and Interest Groups](/community/working-interest-groups): Governance rules for the two forms of collaborative groups within the Model Context Protocol community — Working Groups and Interest Groups.
+- [Group Charter Template](/community/charter-template): Template for MCP Working Group and Interest Group charters.
+- [Roadmap](/development/roadmap): The Model Context Protocol roadmap, covering the priority areas Core Maintainers and Working Groups are driving for the next specification release and how they shape SEP review.
+- [Design Principles](/community/design-principles): The core design principles that guide the development of the Model Context Protocol.
+- [SEP Guidelines](/community/sep-guidelines): Specification Enhancement Proposal (SEP) guidelines for proposing changes to the Model Context Protocol
+- [Governance and Stewardship](/community/governance): Learn about the Model Context Protocol's governance structure and how to participate in the community
+- [Contributor Ladder](/community/contributor-ladder): Roles, responsibilities, and advancement criteria for MCP contributors, from first contribution to Core Maintainer
+- [Feature Lifecycle and Deprecation Policy](/community/feature-lifecycle): How individual MCP specification features move through Active, Deprecated, and Removed states, and the timeline implementers can plan against.
+- [SDK Tiering System](/community/sdk-tiers): Feature completeness, protocol support, and maintenance commitment levels for Model Context Protocol SDKs
+- [Security Policy](/community/security): How to report security vulnerabilities in the Model Context Protocol specification and SDKs, what is in and out of scope, and how SDK maintainers coordinate disclosure.
+- [Antitrust Policy](/community/antitrust): MCP Project Antitrust Policy for participants and contributors
+- [Agents Charter](/community/working-groups/agents): Charter for the MCP Agents Working Group.
+- [File Uploads Charter](/community/working-groups/file-uploads): Charter for the MCP File Uploads Working Group.
+- [Inspector V2 Working Group Charter](/community/working-groups/inspector-v2): Charter for the Inspector V2 Working Group, a Working Group of the Model Context Protocol community.
+- [Interceptors Charter](/community/working-groups/interceptors): Charter for the MCP Interceptors Working Group.
+- [Registry Charter](/community/working-groups/registry): Charter for the MCP Registry Working Group.
+- [SDK Working Group Charter](/community/working-groups/sdk): Charter for the MCP SDK Working Group.
+- [Server Card Charter](/community/working-groups/server-card): Charter for the MCP Server Card Working Group.
+- [Skills Over MCP Charter](/community/working-groups/skills-over-mcp): Charter for the MCP Skills Over MCP Working Group.
+- [Transports Charter](/community/working-groups/transports): Charter for the MCP Transports Working Group.
+- [Triggers and Events Charter](/community/working-groups/triggers-events): Charter for the MCP Triggers and Events Working Group.
+- [Authorization Charter](/community/interest-groups/auth): Charter for the MCP Authorization Interest Group.
+- [Enterprise Interest Group Charter](/community/interest-groups/enterprise): Charter for the MCP Enterprise Interest Group.
+- [Enterprise-Managed Authorization Charter](/community/interest-groups/enterprise-managed-authorization): Charter for the MCP Enterprise-Managed Authorization Interest Group.
+- [Financial Services Charter](/community/interest-groups/financial-services): Charter for the MCP Financial Services Interest Group.
+- [Primitive Grouping Charter](/community/interest-groups/primitive-grouping): Charter for the MCP Primitive Grouping Interest Group.
+- [Security Charter](/community/interest-groups/security): Charter for the MCP Security Interest Group.
+- [Tool Annotations Charter](/community/interest-groups/tool-annotations): Charter for the MCP Tool Annotations Interest Group.

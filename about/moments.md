@@ -6,4 +6,4 @@
 
 ## 文章列表
 
-- [待补充：日期 · 标题 · 一句话摘要]
+- [2026-11-01 · 随手部署：纯 SVG 的灵动黑团子 bloub](/about/moments/bloub-avatar) - 记录 fork 并部署的 x.ai (Grok) 拟态 Avatar，纯 SVG 逐帧还原与在线把玩。
